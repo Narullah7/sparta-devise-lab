@@ -5,7 +5,7 @@ class CarsController < ApplicationController
   # GET /cars
   # GET /cars.json
   def index
-    @cars = Car.all
+    @cars = current_user.cars
   end
 
   # GET /cars/1
@@ -26,6 +26,7 @@ class CarsController < ApplicationController
   # POST /cars.json
   def create
     @car = Car.new(car_params)
+    @car.user = current_user
 
     respond_to do |format|
       if @car.save
