@@ -1,0 +1,14 @@
+<h1>Welcome to all our users posts</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Body</th>
+  </tr>
+  <tr>
+  <% @cars.each do |car| %>
+    <th> <%= car.title %></th>
+    <th> <%= car.body %> </th>
+  </tr>
+  <% end %>
+</table>
