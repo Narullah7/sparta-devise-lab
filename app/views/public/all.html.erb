@@ -4,11 +4,13 @@
   <tr>
     <th>Title</th>
     <th> Body</th>
+    <th>User ID: </th>
   </tr>
   <tr>
   <% @cars.each do |car| %>
     <th> <%= car.title %></th>
     <th> <%= car.body %> </th>
+    <th> <%= car.user_id %> </th>
   </tr>
   <% end %>
 </table>
